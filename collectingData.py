@@ -112,7 +112,27 @@ while True:
     cv2.putText(frame, "D : "+str(count['D']), (10, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
     cv2.putText(frame, "E : "+str(count['E']), (10, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
     cv2.putText(frame, "F : "+str(count['F']), (10, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
-    
+    cv2.putText(frame, "G : "+str(count['G']), (70, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "H : "+str(count['H']), (70, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "I : "+str(count['I']), (70, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "J : "+str(count['J']), (70, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "K : "+str(count['K']), (70, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "L : "+str(count['L']), (70, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "M : "+str(count['M']), (130, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "N : "+str(count['N']), (130, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "O : "+str(count['O']), (130, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "P : "+str(count['P']), (130, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "Q : "+str(count['Q']), (130, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "R : "+str(count['R']), (130, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "S : "+str(count['S']), (190, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "T : "+str(count['T']), (190, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "U : "+str(count['U']), (190, 160), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "V : "+str(count['V']), (190, 180), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "W : "+str(count['W']), (190, 200), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "X : "+str(count['X']), (190, 220), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "Y : "+str(count['Y']), (250, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+    cv2.putText(frame, "Z : "+str(count['Z']), (250, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 1)
+   
     # Coordinates of the ROI
     x1 = int(0.5*frame.shape[1])
     y1 = 10
@@ -151,7 +171,47 @@ while True:
         cv2.imwrite(directory+'E/'+str(count['E'])+'.jpg', roi)
     if interrupt & 0xFF == ord('F'):
         cv2.imwrite(directory+'F/'+str(count['F'])+'.jpg', roi)
-    
+    if interrupt & 0xFF == ord('G'):
+        cv2.imwrite(directory+'G/'+str(count['G'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('H'):
+        cv2.imwrite(directory+'H/'+str(count['H'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('I'):
+        cv2.imwrite(directory+'I/'+str(count['I'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('J'):
+        cv2.imwrite(directory+'J/'+str(count['J'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('K'):
+        cv2.imwrite(directory+'K/'+str(count['K'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('L'):
+        cv2.imwrite(directory+'L/'+str(count['L'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('M'):
+        cv2.imwrite(directory+'M/'+str(count['M'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('N'):
+        cv2.imwrite(directory+'N/'+str(count['N'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('O'):
+        cv2.imwrite(directory+'O/'+str(count['O'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('P'):
+        cv2.imwrite(directory+'P/'+str(count['P'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('Q'):
+        cv2.imwrite(directory+'Q/'+str(count['Q'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('R'):
+        cv2.imwrite(directory+'R/'+str(count['R'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('S'):
+        cv2.imwrite(directory+'S/'+str(count['S'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('T'):
+        cv2.imwrite(directory+'T/'+str(count['T'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('U'):
+        cv2.imwrite(directory+'U/'+str(count['U'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('V'):
+        cv2.imwrite(directory+'V/'+str(count['V'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('W'):
+        cv2.imwrite(directory+'W/'+str(count['W'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('X'):
+        cv2.imwrite(directory+'X/'+str(count['X'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('Y'):
+        cv2.imwrite(directory+'Y/'+str(count['Y'])+'.jpg', roi)
+    if interrupt & 0xFF == ord('Z'):
+        cv2.imwrite(directory+'Z/'+str(count['Z'])+'.jpg', roi)
+   
 cap.release()
 cv2.destroyAllWindows()
 """
