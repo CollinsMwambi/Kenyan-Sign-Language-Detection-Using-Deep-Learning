@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import os
+import 
 
 # Creating directory structure
 if not os.path.exists("data"):
