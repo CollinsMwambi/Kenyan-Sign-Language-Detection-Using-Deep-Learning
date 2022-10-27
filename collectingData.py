@@ -60,9 +60,10 @@ if not os.path.exists("data"):
     os.makedirs("data/test/Y")
     os.makedirs("data/test/Z")
     
+    
 
 # Train or test 
-mode = 'train'
+mode = 'test'
 directory = 'data/'+mode+'/'
 
 cap = cv2.VideoCapture(0)
