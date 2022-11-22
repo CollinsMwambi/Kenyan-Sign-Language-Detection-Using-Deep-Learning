@@ -63,7 +63,7 @@ if not os.path.exists("data"):
     
 
 # Train or test 
-mode = 'train'
+mode = 'train '
 directory = 'data/'+mode+'/'
 
 cap = cv2.VideoCapture(0)
