@@ -6,6 +6,7 @@ from keras.layers import Flatten
 from keras.layers import Dense
 from keras import metrics
 
+
 # Step 1 - Building the CNN
 
 # Initializing the CNN
@@ -60,6 +61,7 @@ classifier.fit(
         epochs=30,
         validation_data=test_set,
         validation_steps=260)
+
 
 
 
