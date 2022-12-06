@@ -56,10 +56,10 @@ test_set = test_datagen.flow_from_directory('data/test',
                                             class_mode='categorical') 
 classifier.fit(
         training_set,
-        steps_per_epoch=260, # No of images in training set
+        steps_per_epoch=260,
         epochs=30,
         validation_data=test_set,
-        validation_steps=260)# No of images in test set
+        validation_steps=260)
 
 
 
