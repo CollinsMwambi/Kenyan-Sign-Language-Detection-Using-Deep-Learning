@@ -34,7 +34,7 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
-    
+    <link rel="stylesheet" type="text/css" href="welcome.css">
 
     <!-- Bootstrap core CSS -->
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -119,7 +119,7 @@
       
       
         <form class="d-flex">
-        <a class="nav-link" href="login.php">Already a member? Login</a>
+        <a class="nav-link" href="signin.php">Already a member? Login</a>
          
         </form>
       </div>
@@ -138,7 +138,9 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today!!</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Sign up</button>
+    <form action="registration.php" method="POST" class="border shadow p-3 rounded">
+        <button type="submit" class="btn btn-dark btn-lg px-4 gap-3" href="">Sign up</button>
+    </form>
       </div>
     </div>
   </div>
