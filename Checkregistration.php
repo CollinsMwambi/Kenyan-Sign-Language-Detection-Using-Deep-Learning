@@ -47,7 +47,7 @@ session_start();
             $receiver=$Email;
             $subject = "Eshara Email Verification Link";
             $message = "<a href ='http://localhost/IsProject/verify.php?code=$code'>Register your Account by clicking this link</a>";
-            $senders = "From: afma.a@yahoo.com \r\n";
+            $senders = "From: collins.mwambi1@gmail.com \r\n";
             $senders .= "MIME-Version: 1.0" . "\r\n";
             $senders .= "Content-type:text/html;charset=UTF-8" . "\r\n";
         

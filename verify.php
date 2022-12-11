@@ -16,7 +16,7 @@ if($resultSet->num_rows == 1){
 
     if($update){
 
-        header("Location: login.php?Your_account_has_been_verified_You_can_now_login");
+        header("Location: signin.php?Your_account_has_been_verified_You_can_now_login");
        
     }else{
         echo"database error";
