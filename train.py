@@ -7,7 +7,7 @@ from keras.layers import Dense
 from keras import metrics
 
 
-# Step 1 - Building the CNN
+# Building CNN
 
 # Initializing the CNN
 classifier = Sequential()
@@ -57,12 +57,16 @@ test_set = test_datagen.flow_from_directory('data/test',
                                             class_mode='categorical') 
 classifier.fit(
         training_set,
-        steps_per_epoch=260,
+        steps_per_epoch=364,
         epochs=30,
         validation_data=test_set,
         validation_steps=260)
 
+classifier.summary()
 
+classifier.fit(test_set)
+test_loss, test_acc = classifier.evaluate(training_set)
+print ('Test loss: {}, Test accuracy: {}'.format(test_loss, test_acc*100))
 
 
 # Saving the model
