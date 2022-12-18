@@ -31,9 +31,9 @@ classifier.add(Dense(units=26, activation='softmax')) # softmax for more than 2
 classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy']) # categorical_crossentropy for more than 2
 
 
-# Step 2 - Preparing the train/test data and training the model
+# Preparing the train/test data and training the model
 
-# Code copied from - https://keras.io/preprocessing/image/
+
 from keras.preprocessing.image import ImageDataGenerator
 
 train_datagen = ImageDataGenerator(

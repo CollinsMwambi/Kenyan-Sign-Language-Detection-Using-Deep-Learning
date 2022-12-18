@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-# Creating folders for eshara data
+# Creating folders for Eshara data
 if not os.path.exists("data"):
     os.makedirs("data")
     os.makedirs("data/train")
@@ -62,10 +62,11 @@ if not os.path.exists("data"):
     
     
 
-# Train or test to capture data you want 
+# Train or test to capture data you want,depending on the mode
 mode = 'train'
 directory = 'data/'+mode+'/'
 
+#Images are captured from the webcam using the cv2.VideoCapture() function 
 cap = cv2.VideoCapture(0)
 
 while True:
@@ -73,7 +74,7 @@ while True:
     # Simulating mirror image
     frame = cv2.flip(frame, 1)
     
-    # Getting count of existing images
+    # initializing count dictionary to keep track of images in each folder
     count = {'A': len(os.listdir(directory+"/A")),
              'B': len(os.listdir(directory+"/B")),
              'C': len(os.listdir(directory+"/C")),
@@ -134,7 +135,7 @@ while True:
     cv2.putText(frame, "Y : "+str(count['Y']), (250, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 2)
     cv2.putText(frame, "Z : "+str(count['Z']), (250, 140), cv2.FONT_HERSHEY_PLAIN, 1, (0,0,0), 2)
    
-    # Coordinates of the ROI
+    # Coordinates of the Region of interest
     x1 = int(0.5*frame.shape[1])
     y1 = 10
     x2 = frame.shape[1]-10
@@ -145,9 +146,10 @@ while True:
     # Extracting ROI
     roi = frame[y1:y2, x1:x2]
     roi = cv2.resize(roi, (64, 64)) 
- 
+     
+         #cv2.imshow is used for display
     cv2.imshow("Frame", frame)
-   
+   #changing image collected to black and white
     roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
     _, roi = cv2.threshold(roi, 120, 255, cv2.THRESH_BINARY)
     cv2.imshow("ROI", roi)
@@ -209,4 +211,5 @@ while True:
         cv2.imwrite(directory+'Z/'+str(count['Z'])+'.jpg', roi)
    
 cap.release()
+
 cv2.destroyAllWindows()
