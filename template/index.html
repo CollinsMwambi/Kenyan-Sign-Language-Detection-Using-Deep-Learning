@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Video Feed</title>
+  </head>
+  <body>
+    <h1>Video Feed</h1>
+    <img src="{{ url_for('video_feed') }}" id="video">
+    <script>
+      
+      setInterval(updateFrame, 1000);
+    </script>
+  </body>
+</html>
