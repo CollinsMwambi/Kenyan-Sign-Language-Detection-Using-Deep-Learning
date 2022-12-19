@@ -130,16 +130,22 @@
   <h1 class="visually-hidden">Heroes examples</h1>
 
   <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="../la.jpg" alt="" width="200" height="180">
+  <img class="d-block mx-auto mb-4" src="{{url_for('static', filename='la.png')}}" alt="" width="200" height="180">
     <h1 class="display-5 fw-bold">Fingerspelling with Eshara</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today!!</p>
+      <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today.</p>
+      <p class="fw-bolder">SCROLL DOWN FOR SOME FUN!!</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       </div>
     </div>
   </div>
-    
-    <img src="{{ url_for('video_feed') }}" id="video">
+  
+  <table>
+  <td><img src="{{url_for('static', filename='ksl.png')}}" ></td>
+   <td><img src="{{ url_for('video_feed') }}" id="video"></td>
+    </table>
+     
+    </table> 
     <script>
       
       setInterval(updateFrame, 1000);
