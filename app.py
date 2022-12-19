@@ -9,7 +9,7 @@ app=Flask(__name__,template_folder='template')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.php')
 
 json_file = open("model-bw.json", "r")
 model_json = json_file.read()

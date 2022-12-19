@@ -130,7 +130,7 @@
   <h1 class="visually-hidden">Heroes examples</h1>
 
   <div class="px-4 py-5 my-5 text-center">
-    <img class="d-block mx-auto mb-4" src="la.jpg" alt="" width="200" height="180">
+    <img class="d-block mx-auto mb-4" src="../la.jpg" alt="" width="200" height="180">
     <h1 class="display-5 fw-bold">Fingerspelling with Eshara</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today!!</p>
@@ -138,34 +138,11 @@
       </div>
     </div>
   </div>
-
-  
-  <!doctype html>
-<html lang="en">
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-
-  <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
- 
-  <p>
-  <i class="fas-solid fa-envelope"></i>Eshara@gmail.com
     
-  </p>
-  
-  <p>
-    <i class="fas fa-phone"></i>   0700000000
-  </p>
- 
-    <p>&copy; 2022 Eshara, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <img src="{{ url_for('video_feed') }}" id="video">
+    <script>
       
+      setInterval(updateFrame, 1000);
+    </script>
   </body>
 </html>
