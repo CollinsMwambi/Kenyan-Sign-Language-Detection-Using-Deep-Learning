@@ -141,8 +141,10 @@
   </div>
   
   <table>
-  <td><img src="{{url_for('static', filename='ksl.png')}}" ></td>
-   <td><img src="{{ url_for('video_feed') }}" id="video"></td>
+    <p class="fw-bolder">Kenyan Sign Language</p>
+  <td><img src="{{url_for('static', filename='bitmap.png')}}" ></td>
+  
+   <td><p class="fw-bolder">Sign here!</p><img src="{{ url_for('video_feed') }}" id="video"></td>
     </table>
      
     </table> 
