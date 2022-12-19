@@ -26,6 +26,7 @@ def gen():
     while True:
         # Read a frame from the video stream
         _, frame = cap.read()
+        # Simulating mirror image
         frame = cv2.flip(frame, 1)
         x1 = int(0.5*frame.shape[1])
         y1 = 10
@@ -34,21 +35,18 @@ def gen():
 
         roi = frame[y1:y2, x1:x2]
     
-    # Resizing the ROI so it can be fed to the model for prediction
-        roi = cv2.resize(roi, (64, 64)) 
-        roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
-        _, test_image = cv2.threshold(roi, 120, 255, cv2.THRESH_BINARY)
-        cv2.imshow("test", test_image) 
-
+   
+     # Drawing the ROI
+    # The increment/decrement by 1 is to compensate for the bounding box
         cv2.rectangle(frame, (x1-1, y1-1), (x2+1, y2+1), (255,0,0) ,1)
-
+        # Extracting the ROI
         roi = frame[y1:y2, x1:x2]
     
     # Resizing the ROI so it can be fed to the model for prediction
         roi = cv2.resize(roi, (64, 64)) 
         roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
         _, test_image = cv2.threshold(roi, 120, 255, cv2.THRESH_BINARY)
-        cv2.imshow("test", test_image)
+    
         result = model.predict(test_image.reshape(1, 64, 64, 1))
         prediction = {'Correctly signed A': result[0][0], 
                   'Correctly signed B': result[0][1], 
@@ -88,6 +86,7 @@ def gen():
         
         # Convert the frame to JPEG format
         frame = cv2.imencode('.jpg', frame)[1].tobytes()
+        
         # Yield the frame to the client
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
