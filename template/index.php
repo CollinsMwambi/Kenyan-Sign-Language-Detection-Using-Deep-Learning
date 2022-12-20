@@ -135,6 +135,9 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today.</p>
       <p class="fw-bolder">SCROLL DOWN FOR SOME FUN!!</p>
+      <p class="fw-semibold">Instructions</p>
+      <p class="fst-italic">Match with the signs shown on the left</p>
+      <p class="fst-italic">Sign anything you'd like!</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       </div>
     </div>
