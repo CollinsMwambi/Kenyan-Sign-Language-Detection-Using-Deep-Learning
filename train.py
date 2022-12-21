@@ -12,7 +12,7 @@ from keras import metrics
 # Initializing the CNN
 classifier = Sequential()
 
-# First convolution layer and pooling
+# First convolution layer has 32 filters of size 3x3 and followed by a max ppooling layer
 classifier.add(Convolution2D(32, (3, 3), input_shape=(64, 64, 1), activation='relu'))
 classifier.add(MaxPooling2D(pool_size=(2, 2)))
 # Second convolution layer and pooling
@@ -25,14 +25,14 @@ classifier.add(Flatten())
 
 # Adding a fully connected layer
 classifier.add(Dense(units=128, activation='relu'))
-classifier.add(Dense(units=26, activation='softmax')) # softmax for more than 2
+classifier.add(Dense(units=26, activation='softmax')) # output layer with 26 units are added
 
 # Compiling the CNN
 classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy']) # categorical_crossentropy for more than 2
 
 
 # Preparing the train/test data and training the model
-
+#ImageDataGenerator class from keras to preprocess the images
 
 from keras.preprocessing.image import ImageDataGenerator
 
@@ -43,6 +43,7 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 
 test_datagen = ImageDataGenerator(rescale=1./255)
+#flow from directory method is used to load the images and their label from the directories
 
 training_set = train_datagen.flow_from_directory('data/train',
                                                  target_size=(64, 64),
@@ -62,6 +63,7 @@ classifier.fit(
         validation_data=test_set,
         validation_steps=260)
 
+#the validation_data and validation_steps parameters specify the validation set and the number of steps per epoch to use for validation 
 classifier.summary()
 
 classifier.fit(test_set)

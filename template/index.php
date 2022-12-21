@@ -4,14 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
+
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
+    
    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
 
@@ -147,7 +145,7 @@
     <p class="fw-bolder">Kenyan Sign Language</p>
   <td><img src="{{url_for('static', filename='bitmap.png')}}" ></td>
   
-   <td><p class="fw-bolder">Sign here!</p><img src="{{ url_for('video_feed') }}" id="video"></td>
+   <td><p class="fw-bolder">Sign in the small blue box!</p><img src="{{ url_for('video_feed') }}" id="video"></td>
     </table>
      
     </table> 

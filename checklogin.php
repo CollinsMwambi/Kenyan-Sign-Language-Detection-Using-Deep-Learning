@@ -36,7 +36,7 @@
                                  $_SESSION['LName'] = $row['LName'];
 
 
-                                    header("Location:home.php?login=login_successful");
+                                    header("Location:template/index.php?login=login_successful");
                                     exit();
                              }
 

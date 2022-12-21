@@ -117,7 +117,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" >Eshara</a>
       
-      
+      <a href="registration.php" style="text-decoration:none;"> New User? Sign up</a>
        
       </div>
     </div>
@@ -135,6 +135,8 @@
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">We are always learning, and here at Eshara, we're committed to making that learning more accessible to everyone.It is an invaluable skill when communicating with deaf people in Kenya; so let's take some time to learn how to use it.Learn  finger spelling in Kenya Sign Language Today!!</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+      <a  type="button" class="btn btn-secondary btn-lg" href="signin.php" style="text-decoration:none;"> Sign in</a>
       </div>
     </div>
   </div>
